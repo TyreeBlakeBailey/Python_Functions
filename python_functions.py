@@ -3,6 +3,7 @@
 
 
 # first iteration
+import math
 
 def greeting():
     return "Welcome to Cyber Security! "  # last line in function should be a return statment
@@ -39,3 +40,6 @@ print(add(4,6))
 print(multiple(3,8))
 print(divide(10,2))
 print(percentage(5, 20))
+
+print(20%5)
+print(math.remainder(20,5))
