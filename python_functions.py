@@ -31,6 +31,11 @@ def multiple(Num1, Num2):
 def divide(Num1, Num2):
     return Num1/Num2
 
+def percentage(Num1, Num2):
+    Answer = (Num1/100) * Num2
+    return f"{Num1}% of {Num2} is {Answer}"
+
 print(add(4,6))
 print(multiple(3,8))
 print(divide(10,2))
+print(percentage(5, 20))
