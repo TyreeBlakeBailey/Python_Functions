@@ -22,10 +22,14 @@ class Calculator:
         return f"{Num1}% of {Num2} is {Answer}"
 
     def divisible(Num1, Num2):
-        if Num1 % Num2 == 0:
-            return True
+        if Num2 == 0:
+            print("(‡ಠ╭╮ಠ) \nYou cannot divide by zero ")
+            raise Exception
         else:
-            return False
+            if Num1 % Num2 == 0:
+                return True
+            else:
+                return False
 
     def triangle(Num1, Num2):
         return f"The area of the triangle is {(Calculator.multiply(Num1, Num2)) / 2}"
