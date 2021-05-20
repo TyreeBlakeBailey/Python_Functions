@@ -23,19 +23,24 @@ class Calculator:
         else:
             return False
 
+    def triangle(Num1, Num2):
+        return f"The area of the triangle is {(Calculator.multiply(Num1, Num2))/2}"
+
 def Nums():
-    try:
-        Num1 = int(input("Number 1 = "))
-        Num2 = int(input("Number 2 = "))
-        return Num1,Num2
-    except ValueError:
-        print("Closing.... \n Please try again and Enter valid numbers")
+
+        Num1 = input("Number 1 = ")
+        Num2 = input("Number 2 = ")
+        if Num1.isdigit() and Num2.isdigit():
+            return int(Num1), int(Num2)
+        else:
+            print("Try again....\nEnter two valid Numbers")
+            Nums()
 
 #Divisible by the method that returns true or false depending on the outcome
 #Work out and return the area of a triangle
 
 while True:
-    Input_Choice = input("\nPlease choose from the following....\nAdd, Subtract, Multiply, Divide, Percentage, Divisible\n").capitalize()
+    Input_Choice = input("\nPlease choose from the following....\nAdd, Subtract, Multiply, Divide, Percentage, Divisible, Triangle, Exit\n").capitalize()
     if Input_Choice == "Add":
         Num1, Num2 = Nums()
         print(Calculator.add(Num1, Num2))
@@ -51,6 +56,10 @@ while True:
     elif Input_Choice == "Percentage":
         Num1, Num2 = Nums()
         print(Calculator.percentage(Num1, Num2))
+    elif Input_Choice == "Triangle":
+        print("Enter base and height of the triangle")
+        Num1, Num2 = Nums()
+        print(Calculator.triangle(Num1, Num2))
     elif Input_Choice == "Divisible":
         print("Enter bigger number first")
         Num1, Num2 = Nums()
@@ -58,5 +67,7 @@ while True:
             print(f"{Num1} is divisible by {Num2}")
         else:
             print(f"{Num1} is not divisible by {Num2}")
+    elif Input_Choice == "Exit":
+        break
     else:
         print("Please enter valid method")
