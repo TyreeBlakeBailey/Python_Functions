@@ -3,13 +3,29 @@
 #For the multiples of five print “Buzz”.
 #For numbers which are multiples of both three and five print “FizzBuzz”."'''
 
+class FizzBuzz:
+    @staticmethod
+
+
+    def Fizz_Check(Num):
+        if Num % 3 == 0:
+            return True
+        else:
+            return False
+
+    def Buzz_Check(Num):
+        if Num % 5 == 0:
+            return True
+        else:
+            return False
+
 x = 0
 while x <= 100:
-    if x % 3 == 0 and x % 5 == 0:
+    if FizzBuzz.Fizz_Check(x) and FizzBuzz.Buzz_Check(x):
         print("FizzBuzz")
-    elif x % 3 == 0:
+    elif FizzBuzz.Fizz_Check(x):
         print("Fizz")
-    elif x % 5 == 0:
+    elif FizzBuzz.Buzz_Check(x):
         print("Buzz")
     else:
         print(x)
