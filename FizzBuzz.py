@@ -26,7 +26,7 @@ class FizzBuzz:  # declared the calss with the name FizzBuzz
         # used for the extra sections on line 28 will generate a random number between 1
         # and user input
         x = 1
-        while x <= Amount:  # runs a loops up until the inputted number while also incrementing x
+        while x <= Amount:  # runs a loops up until the inputted number while also incrementing x while is inclusive
             if x == y:  # random number will have a little surprise (Easter Egg)
                 print(
                     "༼つ ◕_◕ ༽つ")  # What ever the random number is will be replaced with this face instead of the number
