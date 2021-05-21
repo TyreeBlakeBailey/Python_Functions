@@ -1,12 +1,10 @@
-#Write a program that prints the numbers from 1 to 100.
-#But for multiples of three print “Fizz” instead of the number
-#For the multiples of five print “Buzz”.
-#For numbers which are multiples of both three and five print “FizzBuzz”."'''
+# Write a program that prints the numbers from 1 to 100.
+# But for multiples of three print “Fizz” instead of the number
+# For the multiples of five print “Buzz”.
+# For numbers which are multiples of both three and five print “FizzBuzz”."'''
 
 class FizzBuzz:
     @staticmethod
-
-
     def Fizz_Check(Num):
         if Num % 3 == 0:
             return True
@@ -19,6 +17,7 @@ class FizzBuzz:
         else:
             return False
 
+
 x = 0
 while x <= 100:
     if FizzBuzz.Fizz_Check(x) and FizzBuzz.Buzz_Check(x):
@@ -30,4 +29,3 @@ while x <= 100:
     else:
         print(x)
     x += 1
-
