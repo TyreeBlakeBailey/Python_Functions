@@ -20,19 +20,18 @@ class FizzBuzz:  # declared the calss with the name FizzBuzz
         else:  # else it will return false
             return False
 
-    def FizzBuzz(
-            Amount):  # main function that prints the numbers and text, takes a user input to tell it what number to
+    def FizzBuzz(Amount):  # main function that prints the numbers and text, takes a user input to tell it what number to
         # run to
-        y = random.randint(1,
-                           Amount)  # used for the extra sections on line 28 will generate a random number between 1
+        y = random.randint(1,Amount)
+        # used for the extra sections on line 28 will generate a random number between 1
         # and user input
         x = 1
         while x <= Amount:  # runs a loops up until the inputted number while also incrementing x
             if x == y:  # random number will have a little surprise (Easter Egg)
                 print(
                     "༼つ ◕_◕ ༽つ")  # What ever the random number is will be replaced with this face instead of the number
-            elif FizzBuzz.Fizz_Check(x) and FizzBuzz.Buzz_Check(
-                    x):  # checks if the current value of x is multiple of 3 and 5
+            elif FizzBuzz.Fizz_Check(x) and FizzBuzz.Buzz_Check(x):
+                # checks if the current value of x is multiple of 3 and 5
                 print("FizzBuzz")  # if the number is both a multiple of 3 and 5 it will print this line
             elif FizzBuzz.Fizz_Check(x):  # checks if the current value of x is multiple of 3
                 print("Fizz")
