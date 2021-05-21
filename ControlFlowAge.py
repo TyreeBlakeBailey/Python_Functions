@@ -47,6 +47,7 @@ while True:
         print("Try again Enter a valid age")
         continue
 
+
     if Over_18(age) and Driver(driver_lisence):
         print("\nYou can vote and drive ")
     elif Over_18(age) and not Driver(driver_lisence):

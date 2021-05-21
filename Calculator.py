@@ -1,3 +1,9 @@
+#create a calculator class
+#add, subtract, multiply, divide, divisible
+#extra Percentage, area of a triangle, inches to cm converter
+
+
+
 class Calculator:
 
     @staticmethod
