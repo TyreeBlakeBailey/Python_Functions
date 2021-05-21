@@ -1,4 +1,3 @@
-
 # - You can vote and drivre
 # - You can vote
 # - You can driver
@@ -6,23 +5,50 @@
 # - Your too young, go back to school!
 
 
- #  as a user I should be able to keep being prompted for input until I say 'exit'
+#  as a user I should be able to keep being prompted for input until I say 'exit'
 
-#Starter code
-
-age = 17
-driver_lisence = True
+# Starter code
 
 
-if age >= 18 and driver_lisence:
-    print("You can vote and drive ")
-elif age >= 18 and driver_lisence == False:
-    print("You can vote")
-if age > 16 and age < 18:
-    print("You can't legally drink but your mates/uncles might have your back")
-elif age < 16:
-    driver_lisence = False
-    print("Your too young go back to school")
-elif driver_lisence and age < 18:
-    print("You can drive")
+def Over_18(age):
+    if age >= 18:
+        return True
+    else:
+        return False
+
+
+def Over_16(age):
+    if age > 16:
+        return True
+    else:
+        return False
+
+
+def Driver(Lisence):
+    if Lisence.upper() == "Y":
+        return True
+    else:
+        return False
+
+while True:
+    try:
+        age = int(input("\nHow old are you?  "))
+        if Over_16(age) != True:
+            driver_lisence = False
+        else:
+            driver_lisence = input("Do you have you driving license?  Y/N   ")
+    except ValueError:
+        print("Try again Enter a valid age")
+        continue
+
+    if Over_18(age) and Driver(driver_lisence):
+        print("\nYou can vote and drive ")
+    elif Over_18(age) and Driver(driver_lisence):
+        print("\nYou can vote")
+    elif Over_16(age) and Over_18(age) != True:
+        print("\nYou can't legally drink but your mates/uncles might have your back")
+    elif Over_16(age) != True:
+        print("\nYour too young go back to school")
+    elif driver_lisence and Over_18(age) != True:
+        print("\nYou can drive")
 
