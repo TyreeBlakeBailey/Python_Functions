@@ -30,25 +30,30 @@ def Driver(Lisence):
     else:
         return False
 
+
 while True:
     try:
-        age = int(input("\nHow old are you?  "))
-        if Over_16(age) != True:
-            driver_lisence = False
+        print("\nType exit to leave programme.....")
+        age = input("\nHow old are you?  ")
+        if age.lower() == "exit":
+            break
         else:
-            driver_lisence = input("Do you have you driving license?  Y/N   ")
+            age = int(age)
+            if Over_16(age) != True:
+                driver_lisence = False
+            else:
+                driver_lisence = input("Do you have you driving license?  Y/N   ")
     except ValueError:
         print("Try again Enter a valid age")
         continue
 
     if Over_18(age) and Driver(driver_lisence):
         print("\nYou can vote and drive ")
-    elif Over_18(age) and Driver(driver_lisence):
+    elif Over_18(age) and not Driver(driver_lisence):
         print("\nYou can vote")
-    elif Over_16(age) and Over_18(age) != True:
+    if age >= 16 and not Over_18(age):
         print("\nYou can't legally drink but your mates/uncles might have your back")
-    elif Over_16(age) != True:
+    elif not Over_16(age):
         print("\nYour too young go back to school")
-    elif driver_lisence and Over_18(age) != True:
+    if Driver(driver_lisence) and not Over_18(age):
         print("\nYou can drive")
-
