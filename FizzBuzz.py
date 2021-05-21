@@ -2,6 +2,8 @@
 # But for multiples of three print “Fizz” instead of the number
 # For the multiples of five print “Buzz”.
 # For numbers which are multiples of both three and five print “FizzBuzz”."'''
+import random
+
 
 class FizzBuzz:
     @staticmethod
@@ -20,7 +22,9 @@ class FizzBuzz:
 
 x = 0
 while x <= 100:
-    if FizzBuzz.Fizz_Check(x) and FizzBuzz.Buzz_Check(x):
+    if x == random.randint(1, 100): #random number will have a little suprise (Easter Egg)
+        print("༼つ ◕_◕ ༽つ")
+    elif FizzBuzz.Fizz_Check(x) and FizzBuzz.Buzz_Check(x):
         print("FizzBuzz")
     elif FizzBuzz.Fizz_Check(x):
         print("Fizz")

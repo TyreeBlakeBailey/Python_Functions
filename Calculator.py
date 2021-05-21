@@ -46,6 +46,10 @@ def Nums():
         Num2 = int(Num2)
         return Num1, Num2
     else:
+        if not Num1.isdigit():
+            print(f"{Num1} isn't a valid number")
+        if not Num2.isdigit():
+            print(f"{Num2} isn't a valid number")
         print("Try again....\nEnter two valid Numbers")
         raise Exception
 

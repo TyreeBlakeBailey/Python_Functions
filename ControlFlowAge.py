@@ -25,7 +25,7 @@ def Over_16(age):
 
 
 def Driver(Lisence):
-    if Lisence.upper() == "Y":
+    if Lisence == "Y":
         return True
     else:
         return False
@@ -42,7 +42,7 @@ while True:
             if Over_16(age) != True:
                 driver_lisence = False
             else:
-                driver_lisence = input("Do you have you driving license?  Y/N   ")
+                driver_lisence = input("Do you have you driving license?  Y/N   ").upper()
     except ValueError:
         print("Try again Enter a valid age")
         continue
