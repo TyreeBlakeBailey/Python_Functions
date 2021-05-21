@@ -21,17 +21,26 @@ class FizzBuzz:
         else:
             return False
 
+    def FizzBuzz(Amount):
+        y = random.randint(1, Amount)
+        x = 0
+        while x <= Amount:
+            if x == y:  # random number will have a little suprise (Easter Egg)
+                print("༼つ ◕_◕ ༽つ")
+            elif FizzBuzz.Fizz_Check(x) and FizzBuzz.Buzz_Check(x):
+                print("FizzBuzz")
+            elif FizzBuzz.Fizz_Check(x):
+                print("Fizz")
+            elif FizzBuzz.Buzz_Check(x):
+                print("Buzz")
+            else:
+                print(x)
+            x += 1
 
-x = 0
-while x <= 100:
-    if x == random.randint(1, 100): #random number will have a little suprise (Easter Egg)
-        print("༼つ ◕_◕ ༽つ")
-    elif FizzBuzz.Fizz_Check(x) and FizzBuzz.Buzz_Check(x):
-        print("FizzBuzz")
-    elif FizzBuzz.Fizz_Check(x):
-        print("Fizz")
-    elif FizzBuzz.Buzz_Check(x):
-        print("Buzz")
-    else:
-        print(x)
-    x += 1
+
+Amount = input("How much would you like to go to? ")
+
+if Amount.isdigit():
+    FizzBuzz.FizzBuzz(int(Amount))
+else:
+    print("Please only enter numbers")
